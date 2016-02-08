@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :termino %><br>
-    <%= f.datetime_select :termino %>
+    <!-- 
+        Define a data de término com o ano iniciando a 2016. Isso evita que sejam criados
+        eventos que terminem em anos anteriores a data atual.
+     -->
+    <%= f.datetime_select :termino, start_year: 2016 %>
   </div>
   <div class="actions">
     <%= f.submit %>
